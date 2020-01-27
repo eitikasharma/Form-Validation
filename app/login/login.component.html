@@ -1,0 +1,78 @@
+
+<form (submit) = "onAddPost(postForm)" #postForm = "ngForm">
+    <mat-card>
+
+        First Name :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <mat-form-field>
+            <input matInput placeholder="Enter here...." minlength = "5" type = "text" 
+            required
+             #first = "ngModel" ngModel name = "first">
+             <mat-error *ngIf = "first.invalid">
+                 Please enter valid First Name</mat-error>
+        </mat-form-field><br/>
+
+
+        Last Name :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <mat-form-field>    
+            <input matInput placeholder="Enter here...." minlength = "3" type = "text" 
+            required
+             #last = "ngModel" ngModel name = "last">
+             <mat-error *ngIf = "last.invalid">
+                 Please enter valid Last Name</mat-error>
+        </mat-form-field><br/>
+
+        
+        Age :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <mat-form-field>
+            <input matInput placeholder="        Enter here...." #age = "ngModel"
+            type = "number"  required 
+            ngModel name = "age">
+             <mat-error *ngIf = "age.invalid">
+                 Please enter valid age</mat-error>
+        </mat-form-field><br/>
+
+        Gender :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <mat-form-field>
+            <input matInput placeholder="Enter here...." #gender = "ngModel"
+            type = "text"  required 
+            ngModel name = "gender">
+             <mat-error *ngIf = "gender.invalid">
+                 Required</mat-error>
+        </mat-form-field><br/> 
+
+        Mail :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <mat-form-field>
+            <input matInput placeholder="Enter here...." #mail = "ngModel"
+            type = "email"  required 
+            ngModel name = "mail">
+             <mat-error *ngIf = "mail.invalid">
+                 Required</mat-error>
+        </mat-form-field><br/> 
+
+        City :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <mat-form-field>
+            <input matInput placeholder="Enter City here...." #city = "ngModel"
+            type = "text"  required 
+            ngModel name = "city">
+             <mat-error *ngIf = "city.invalid">
+                 Please enter city </mat-error>
+        </mat-form-field><br/>        
+
+        State :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <mat-form-field>
+            <input matInput placeholder="Enter State here...." #state = "ngModel"
+            type = "text"  required 
+            ngModel name = "state">
+              <mat-error *ngIf = "state.invalid">
+                 Required</mat-error>
+        </mat-form-field><br/> 
+
+
+
+        <button mat-raised-button  
+        type = "submit">
+            Save Data
+        </button>
+    
+        </mat-card>
+</form>
