@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
       console.log("Form State Invalid found");
       return;
     }
-    const post = {first:form.value.first , last:form.value.last , age:form.value.age, gender:form.value.gender, mail:form.value.mail, city:form.value.city, state:form.value.state};
+    const post = {first:form.value.first , last:form.value.last , age:form.value.age, gender:form.value.gender, mail:form.value.mail, password:form.value.password, phone:form.value.phone, city:form.value.city, state:form.value.state};
     console.log(post);
   }
 

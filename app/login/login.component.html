@@ -49,6 +49,24 @@
                  Required</mat-error>
         </mat-form-field><br/> 
 
+        Password :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <mat-form-field>
+            <input matInput placeholder="Password...." #password = "ngModel"
+            type = "password"  required 
+            ngModel name = "password">
+             <mat-error *ngIf = "password.invalid">
+                 Please enter valid password</mat-error>
+        </mat-form-field><br/>       
+
+        Phone :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <mat-form-field>
+            <input matInput placeholder="+91  " #phone = "ngModel"
+            type = "phone" minlength="10" maxlength="10"  required 
+            ngModel name = "phone">
+             <mat-error *ngIf = "phone.invalid">
+                 Required</mat-error>
+        </mat-form-field><br/>        
+
         City :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <mat-form-field>
             <input matInput placeholder="Enter City here...." #city = "ngModel"
